@@ -2,12 +2,24 @@
     position: sticky;
     top: 0;
     z-index: 999;
-    display: flex;
-    justify-content: space-evenly;
     border-bottom: .1px solid lightgray;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
 }
 
 .header__left {
@@ -21,6 +33,7 @@
     object-fit: contain;
     height: 34px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .header__search {
@@ -37,6 +50,12 @@
     border: none;
     background: none;
     margin-left: 5px;
+    width: 150px;
+    transition-duration: .2s;
+}
+
+.header__search > input:focus {
+    width: 200px;
 }
 
 .header__right {
